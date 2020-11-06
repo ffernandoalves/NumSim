@@ -1,0 +1,3 @@
+delta_t     &   t_end                                           // Valores referente ao tempo: taxa de incremento e tempo final
+N                                                               // Numeros de corpos celestes
+name_body   &   mass    &   position_init   &   velocity_init   // Nome do corpo, massa, posição inicial, velocidade inicial
