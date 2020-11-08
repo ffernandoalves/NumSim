@@ -63,7 +63,7 @@ class CelestialBodyAnimate:
 
 
 class GeradorCOA:
-    def __init__(self, data_frame, ax, saveImg=False):
+    def __init__(self, data_frame, ax, saveImg=None):
         self.data_frame = data_frame
         self.delta_t = self.data_frame["delta_t"][0]
         self.ax = ax
@@ -134,47 +134,51 @@ class GeradorCOA:
     
 def init_animate(self, fig, repeat=False):
     anim = animation.FuncAnimation(fig, 
-                                    join_mat_funcs(*self.store_animate), 
-                                    frames=np.arange(1, self.TAM_SHAPE),
-                                    interval=int(100 * DT),
-                                    #blit=True, #causa erro de _on_time no terminal
-                                    init_func=join_mat_funcs(*self.store_init),
-                                    repeat=repeat)
+                                   join_mat_funcs(*self.store_animate), 
+                                   frames    = np.arange(1, self.TAM_SHAPE),
+                                   interval  = int(100 * DT),
+                                   #blit     = True, #causa erro de _on_time no terminal
+                                   init_func = join_mat_funcs(*self.store_init),
+                                   repeat    = repeat)
     return anim
 
-def start_animation(data_frame, show=True, saveAnim=False, saveImg=False, repeat=False):
+def start_animation(data_frame, p_output=None, show=True, saveas=None, repeat=False):
     fig, ax = plt.subplots()
     ax.set_xlim((-40, 40))
     ax.set_ylim((-40, 40))
     ax.set_aspect("equal")
     ax.grid()
 
-    gerador = GeradorCOA(data_frame, ax, saveImg)
+    gerador = GeradorCOA(data_frame, ax, saveas)
     gerador.init()
 
     anim = init_animate(gerador, fig, repeat=repeat)
 
 
-    if saveAnim or saveImg:
-        salve(anim, saveAnim=saveAnim, saveImg=saveImg)
+    if saveas:
+        salve(anim, p_output=p_output, saveas=saveas)
 
     if show:
         plt.show()
 
-
-def salve(anim, p_output, saveAnim=False, saveImg=False):
+def salve(anim, p_output, saveas=None):
     import os
     from datetime import datetime
     file_base = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
     file_name = f"{os.path.join(p_output, file_base)}"
 
-    if saveAnim:
+    if saveas == "mp4":
         Writer = animation.writers['ffmpeg']
         writer = Writer(fps=1/DT, metadata=dict(artist='Me'), codec="libx264", bitrate=-1)
         print(f"Salvando animação em {file_name}.mp4")
         anim.save(file_name + ".mp4", writer=writer, dpi=200)
+    
+    elif saveas == "gif":
+        writer = LoopingPillowWriter(fps=15, bitrate=-1, codec="libx264", metadata=dict(artist='Me'))
+        print(f"Salvando animação em {file_name}.gif")
+        anim.save(file_name + ".gif", writer=writer)
 
-    if saveImg:
+    elif saveas == "png":
         #TODO
         #está salvando a penas o primeiro frame
         print(f"Salvando imagem em {file_name}.png")
@@ -182,3 +186,9 @@ def salve(anim, p_output, saveAnim=False, saveImg=False):
 
     print("Concluido.")
     return True
+
+class LoopingPillowWriter(animation.PillowWriter):
+    def finish(self):
+        self._frames[0].save(
+            self.outfile, save_all=True, append_images=self._frames[1:],
+            duration=int(1000 / self.fps), loop=0)
