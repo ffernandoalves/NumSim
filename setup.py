@@ -16,8 +16,7 @@ module1 = Extension("numsim.computer.velocity_verlet",
 data_file1 = ("examples", ["examples/celetial_body.py"])
 data_file2 = ("examples/data", ["examples/data/input.csv.example", 
                                 "examples/data/sun_system.csv", 
-                                "examples/data/output.csv.example",
-                                "examples/data/2020-07-16-03-33-55.png"])
+                                "examples/data/output.csv.example"])
 
 
 setup(name            = "numsim",
