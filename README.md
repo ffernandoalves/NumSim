@@ -3,7 +3,7 @@
 Este é um repositório para métodos numéricos em C++ e Python.
 
 Exemplo:
-```
+```python
 from numsim import init_verlet, load_data_generated, start_animation
 
 data_in  = "examples/data/sun_system.csv"
