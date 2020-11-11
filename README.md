@@ -25,7 +25,8 @@ cd NumSim
 virtualenv -p /usr/bin/python3.7 venv 
 source venv/bin/activate
 venv/bin/python3.7 setup.py install -->
-<!--- ex: ```venv/bin/python3.7 my_sim.py``` -->
+<!--- ex: ```venv/bin/python3.7 my_sim.py```
+-->
 
 ------------
 
