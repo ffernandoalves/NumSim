@@ -54,7 +54,7 @@ start_animation(df)
 
 ------------
 
-## Referências (ou _"copiado de"_)
+## Referências
 
 [1] Griebel, M.; Knapek, S.; Zumbush, G. Numerical Simulation in Molecular Dynamics; Springer: Berlin‐Heidelberg, 2007.
 
