@@ -57,3 +57,9 @@ start_animation(df)
 ## Referências (ou _"copiado de"_)
 
 [1] Griebel, M.; Knapek, S.; Zumbush, G. Numerical Simulation in Molecular Dynamics; Springer: Berlin‐Heidelberg, 2007.
+
+------------
+
+## Licença
+
+[MIT License](https://en.wikipedia.org/wiki/MIT_License).
