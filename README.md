@@ -20,6 +20,4 @@ start_animation(df)
 
 ## Referências (ou _"copiado de"_)
 
-O método - _Velocidade de Verlet_ - foi adaptado a partir do livro: 
-
 [1] Griebel, M.; Knapek, S.; Zumbush, G. Numerical Simulation in Molecular Dynamics; Springer: Berlin‐Heidelberg, 2007.
