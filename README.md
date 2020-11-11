@@ -2,7 +2,7 @@
 
 Este é um repositório para métodos numéricos em **C++** e **Python**.
 
-Livro base: *Numerical Simulation in Molecular Dynamics: 
+Livro de referência: *Numerical Simulation in Molecular Dynamics: 
 Numerics, Algorithms, Parallelization, Applications by Michael Griebel, Gerhard Zumbusch, Stephan Knapek*
 
 ------------
