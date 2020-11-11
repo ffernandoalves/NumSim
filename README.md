@@ -16,7 +16,6 @@ git clone https://github.com/ffernandoalves/NumSim.git
 cd NumSim
 python3.7 setup.py install
 ```
-ex: ```python3.7 my_sim.py```
 
 <!---
 Usando virtualenv:
