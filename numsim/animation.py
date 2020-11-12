@@ -145,7 +145,7 @@ def init_animate(self, fig, repeat=False):
                                    join_mat_funcs(*self.store_animate), 
                                    frames    = np.arange(1, self.TAM_SHAPE),
                                    interval  = int(100 * DT),
-                                   #blit     = True, #causa erro o "_on_time" quando usado no terminal
+                                   #blit     = True, #causa o erro "_on_time" quando usado no terminal
                                    init_func = join_mat_funcs(*self.store_init),
                                    repeat    = repeat)
     return anim
