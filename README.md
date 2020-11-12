@@ -1,7 +1,7 @@
 # NumSim
 
 Este é um repositório para métodos numéricos em **C++** e **CPython**. Os "metódos númericos" vão ser escritos em `c++` e, 
-por enquanto, a utilização do Python é repassar o dados iniciais para os metódos (em c++) e a fazer a visualização
+por enquanto, a utilização do Python é repassar o dados iniciais para os metódos (em c++) e fazer a visualização
 da simulação ([matplotlib](https://matplotlib.org/)).
 
 Os "metodos" `init` dos "metódos númericos" são escritos em **CPython**. 
