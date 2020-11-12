@@ -24,8 +24,9 @@ git clone https://github.com/ffernandoalves/NumSim.git
 cd NumSim
 virtualenv -p /usr/bin/python3.7 venv 
 source venv/bin/activate
-venv/bin/python3.7 setup.py install -->
-<!--- ex: ```venv/bin/python3.7 my_sim.py```
+venv/bin/python3.7 setup.py install
+
+ex: ```venv/bin/python3.7 my_sim.py```
 -->
 
 ------------
@@ -48,9 +49,19 @@ start_animation(df)
 
 ## TODO
 
-- [x] Melhorar o modulo [animation.py](https://github.com/ffernandoalves/NumSim/blob/main/numsim/animation.py) e torná-lo mais geral;
-- [ ] Criar um script para manipulação de dados, em um arquivo separado, em c++ (ver [velocity_verlet.cpp](https://github.com/ffernandoalves/NumSim/blob/main/numsim/computer/velocity_verlet.cpp));
+- [ ] Melhorar o modulo [`animation.py`](https://github.com/ffernandoalves/NumSim/blob/main/numsim/animation.py) e torná-lo mais geral;
+
+    - [x] Renomear nomes de variáveis, funções e classes;
+    - [ ] Salvar simulação, formatos:
+      - [x] `mp4`;
+      - [x] `gif`;
+      - [ ] `image (png)`.
+    - [ ] Ajustar o Time da simulação.
+- [ ] Criar um script para manipulação de dados, em um arquivo separado, em `c++` (ver [`velocity_verlet.cpp`](https://github.com/ffernandoalves/NumSim/blob/main/numsim/computer/velocity_verlet.cpp));
 - [ ] Implementar os capítulos restantes [1].
+------------
+
+- [ ] Refazer a simulação em `c++` (`OpenGL`).
 
 ------------
 
