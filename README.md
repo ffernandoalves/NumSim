@@ -48,9 +48,9 @@ start_animation(df)
 
 ## TODO
 
-1. Melhorar o modulo [animation.py](https://github.com/ffernandoalves/NumSim/blob/main/numsim/animation.py) e torná-lo mais geral;
-2. Criar um script para manipulação de dados, em um arquivo separado, em c++ (ver [velocity_verlet.cpp](https://github.com/ffernandoalves/NumSim/blob/main/numsim/computer/velocity_verlet.cpp));
-3. Implementar os capítulos restantes [1].
+- [x] Melhorar o modulo [animation.py](https://github.com/ffernandoalves/NumSim/blob/main/numsim/animation.py) e torná-lo mais geral;
+- [ ] Criar um script para manipulação de dados, em um arquivo separado, em c++ (ver [velocity_verlet.cpp](https://github.com/ffernandoalves/NumSim/blob/main/numsim/computer/velocity_verlet.cpp));
+- [ ] Implementar os capítulos restantes [1].
 
 ------------
 
